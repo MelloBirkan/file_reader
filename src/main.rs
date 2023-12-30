@@ -6,7 +6,7 @@ fn main() {
     let mut args: Vec<String> = env::args().collect();
     // Remove the first argument, which is the path to the executable
     if let Some(string) = args.get_mut(0) {
-        *string = string.replace("file_reader", "");
+        string.truncate(string.len() - 11)
     }
     let mut input = String::new();
     println!("Enter a file name in this directory: {}", args[0]);
