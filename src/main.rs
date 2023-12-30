@@ -13,7 +13,7 @@ fn main() {
     std::io::stdin()
         .read_line(&mut input)
         .expect("Error reading line");
-    let path = format!("{}/{}", args[0],input.trim());
+    let path = format!("{}{}", args[0],input.trim());
 
     println!("Path: {}", &path);
     let file = File::open(&path);
